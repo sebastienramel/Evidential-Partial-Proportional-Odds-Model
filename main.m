@@ -13,7 +13,7 @@ idnoProp = find(pvalues(2:end)<0.05);
 [p_ppom_mle, J_ppom_mle]=learnPpom(ds(:,1:end-1),idnoProp,ds(:,end),0);
 
 % Predict the class of a test instance (predictive probability and mass function)
-xt = [0,8];
+xt = [0,4];
 [pit,~] = predPrPpom(p_ppom_mle,xt,idnoProp);
 [mt]=predEvPpom(ds,p_ppom_mle,J_ppom_mle,xt,idnoProp,20,0); 
 
